@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_grafico"
+            android:icon="@drawable/ic_grafico_50"
+            android:title="@string/menu_grafico" />
+
+        <item
+            android:id="@+id/nav_tabela"
+            android:icon="@drawable/ic_tabela_50"
+            android:title="@string/menu_tabela" />
+
+        <item
+            android:id="@+id/nav_enviar"
+            android:icon="@drawable/ic_share_50"
+            android:title="@string/fragmento_compartilhar" />
+
+        <item
+            android:id="@+id/nav_sobre_app"
+            android:icon="@drawable/ic_smartphone_50"
+            android:title="@string/fragmento_sobre_app" />
+    </group>
+
+</menu>

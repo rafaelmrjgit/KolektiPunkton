@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kolekti Punkton</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_grafico">Graph</string>
+    <string name="menu_tabela">Table</string>
+
+
+    <!-- fragmento imagem -->
+    <string name="imagem_origem">Set the ordered pair to the origin</string>
+    <string name="imagem_xo">Xo</string>
+    <string name="imagem_yo">Yo</string>
+    <string name="imagem_x">X</string>
+    <string name="imagem_y">Y</string>
+    <string name="imagem_eixos_comprimento">Set the extreme values pointed on the axes</string>
+    <string name="imagem_definir_pontos">Save</string>
+    <string name="salvar_falha">The data could not be saved</string>
+    <string name="imagem_cumprir_etapas">Load an image, mark the axes and points and fill in the 4 fields above</string>
+    <string name="imagem_tipos_incorretos">There is at least one value in the fields above that cannot be used</string>
+    <string name="imagem_preencher_tudo">Please fill out all the fields</string>
+    <string name="img_permissao_camera">You need to give the app permission to load images from the camera</string>
+    <string name="img_permissao_titulo">Permissions</string>
+    <string name="img_permissoes_negadas_conf">Go to your device\'s settings?</string>
+    <string name="img_sem_img_pasta">Load an image file to use the undo function</string>
+    <string name="img_sem_pasta">Load an image file</string>
+    <string name="img_falha_bitmap">The image could not be converted</string>
+
+
+    <!-- fragmento tabela -->
+    <string name="tabela_valores_nulos">All values are null. Check the filling of the 4 parameters on the Graph tab.</string>
+    <string name="tbl_sem_img_pasta">Load an image and follow the menu instructions</string>
+
+
+    <!-- fragmento fale_conosco -->
+    <string name="fragmento_sobre_app">About the app</string>
+    <string name="comunicacao_titulo">Communication</string>
+    <string name="contato_mensagem">Type your message</string>
+    <string name="contato_titulo">Choose your email app</string>
+    <string name="play_store">Rate the app on the Play Store</string>
+    <string name="contato_envie_email">Send the developer an email</string>
+    <string name="contato_sobre_app_titulo">About the app</string>
+    <string name="contato_versao_app">Version</string>
+
+
+    <!-- fragmento compartilhar -->
+    <string name="fragmento_compartilhar">Share csv</string>
+    <string name="compartilhar_selecionar">Not shared. Select a file.</string>
+    <string name="compartilhar_nomeArquivo">Not shared. Name the file.</string>
+    <string name="compartilhar_com">Share with:</string>
+    <string name="compartilhar_csv_erro">The csv file could not be shared</string>
+    <string name="compartilhar_armazenamento_ext_indisp">The file can not be shared because the external storage is unavailable</string>
+    <string name="compartilhar_csv_diretorio_falha">A share folder could not be created</string>
+    <string name="compartilhar_hint">Name the csv file</string>
+    <string name="compartilhar_arquivo_nao_encontrado">File not found</string>
+
+
+    <!-- fragmento sobre o app -->
+    <string name="texto_sobre_app">"This app is a tool for extracting data points from a two-dimensional graph with a linear scale.\n\n
+You just need to either load an image from your device or take a picture, mark the points and enter four parameters of the graph.\n\n
+The data table is shown in the app itself and can be shared as a csv file.\n\n
+In order to load images from the camera, you need to give the app permission to access the camera.\n\n
+JPEG files are created from the images loaded in the app by the user. They are saved in the app folder for later recovering and editing by the user. These JPEG files are not shared by the app and are exclusively stored on the user\'s device.\n\n
+CSV files are created after the optional sharing operation and saved on the device\'s storage folder.\n\n
+Kolekti Punkton opens a sharing window so that the user can choose another app installed on the device (such as WhatsApp, Gmail and Outlook) to share the file."
+    </string>
+
+    <!-- instruções do app -->
+    <string name="activity_intrucoes1">App instructions</string>
+    <string name="activity_intrucoes2">"Kolekti Punkton processes two-dimensional graphs with linear scales. In the current version, the logarithmic scale is not included.\n\n
+CSV files are created after the optional sharing operation and saved on the device\'s storage folder.\n\n
+These files have two data sets for comma and period as decimal separators.\n\n
+Processing graphs with very different magnitudes between abscissa and ordinate generally does not leads to results very close to the true ones due to the limitation in showing these types of graphs in a reasonable size on the screen.\n\n
+In order to give an example of the app usage, the graph below with a linear scale was chosen."
+    </string>
+    <string name="activity_intrucoes3">This graph, saved as a JPG file, can be loaded in the app from the \"load from gallery\" button shown in the image below.</string>
+    <string name="activity_intrucoes4">"Now points can be marked: the origin, the extreme values on the axes and the points on the curve.\n\n
+After the first point marked on the curve, we can press the automatic points selection button.\n\n
+In this example, a wired mouse connected to the smartphone via a USB-OTG adapter was used to mark the origin, the extreme values on the axes and the first point on the curve. Then the automatic points selection button was pressed.
+    </string>
+    <string name="activity_intrucoes5">"For each value of x the automatic selection looks for only one value of y like a mathematical function that associates each element of a set X to a single element of a set Y.\n\n
+If there are areas with few marked points, you can consider the manual selection.\n\n
+The graph parameters must be informed in 4 fields. Then click on the Save button."
+    </string>
+    <string name="activity_intrucoes6">The data is now available on the Data Table Tab.</string>
+    <string name="activity_intrucoes7">This data table can be shared as a CSV file that can be opened in several spreadsheet editors and in simple text editors.</string>
+    <string name="activity_intrucoes8">It is possible to share through many apps such as WhatsApp, Gmail and Outlook.</string>
+    <string-array name="activity_intrucoes_lista">
+        <item>Open file: it opens a list box for choosing a saved file.</item>
+        <item>Delete file: it deletes all the file data. The file no longer exists in the app.</item>
+        <item>Clear file: it deletes all  the file data. The file still exists in the app and can be selected in Open file.</item>
+        <item>Settings: you can choose the marker color, the marker size, the app theme, the auto-save and set the specificity.</item>
+    </string-array>
+    <string name="activity_intrucoes9">In the automatic points selection, a high specificity stands for a smaller color range to search the points and it takes less execution time.</string>
+    <string name="activity_intrucoes10">Now look at the add button in the image below. It creates a file after validating the name entered by the user.</string>
+    <string name="activity_intrucoes11">The following image highlights the undo button. It removes the points added from the last to the first, one for each click event.</string>
+    <string name="activity_intrucoes12">End of the instructions\n</string>
+
+    <!-- banco de dados -->
+    <string name="tabela_erro_criar">A table could not be created in the database.</string>
+    <string name="db_erro_tabela_branco">A blank table could not be created.</string>
+    <string name="db_erro_tabela_atualizacao">A table could not be updated.</string>
+    <string name="db_erro_tabela_principal">The file table could not be created.</string>
+    <string name="db_erro_preferencias">Preferences file could not be created.</string>
+    <string name="db_semdados">No data</string>
+    <string name="db_salvo_sucesso">Data available in the table tab.</string>
+    <string name="db_salvo_temp_falha">The data could not be saved.</string>
+    <string name="db_aguardar_gravacao">Please wait</string>
+    <string name="pref_nome_vazio">The file cannot be saved. A name does not exist.</string>
+    <string name="db_primeiro_projeto">FirstFile</string>
+    <string name="db_desinstalacao">The app could not format the database.</string>
+
+
+    <!-- adapter -->
+    <string name="adapter_texto_nao_definido">--</string>
+
+
+    <!-- salvar imagem -->
+    <string name="salvar_img_falha_arquivo">The image could not be saved.</string>
+
+
+    <!-- menu toolbar -->
+    <string name="toolbar_novop">New file</string>
+    <string name="toolbar_abrirp">Open file</string>
+    <string name="toolbar_excluirp">Delete file</string>
+    <string name="toolbar_limparp">Clear file</string>
+    <string name="toolbar_preferencias">Settings</string>
+    <string name="toolbar_instrucoes">Instructions</string>
+
+
+    <!-- activity criar proj -->
+    <string name="np_novo_projeto_titulo">New file</string>
+    <string name="np_nome">File name</string>
+    <string name="np_branco">New</string>
+    <string name="np_nome_existente">There is already a file named that way.</string>
+    <string name="np_input_vazio">The file cannot be created.</string>
+    <string name="np_preencher_tudo">Please fill out all the fields.</string>
+
+    <!-- activity excluir proj -->
+    <string name="excp_exclusaoproj_titulo">Delete</string>
+    <string name="excp_projeto_excluido">The file was deleted.</string>
+    <string name="excp_exclusao_erro">It was not possible to delete the file.</string>
+
+    <!-- activity limpar proj -->
+    <string name="lp_limpar_tudo">Clear file</string>
+    <string name="lp_erro_limpar_tudo">The file could not be cleaned.</string>
+    <string name="lp_erro_excluir_img">The image could not be deleted.</string>
+
+
+    <!-- OK, Sim, Não, cancelar -->
+    <string name="sim">Yes</string>
+    <string name="nao">No</string>
+    <string name="cancelar">Cancel</string>
+
+    <!-- inputbox -->
+    <string name="inputbox_nome">File name</string>
+
+
+    <!-- nomes activities -->
+    <string name="act_criarp">New file</string>
+    <string name="act_abrirrp">Open file</string>
+    <string name="act_excluirp">Delete file</string>
+    <string name="act_configuracoes">Settings</string>
+    <string name="act_limparp">Clear file</string>
+
+
+    <!-- configurações -->
+    <string name="tema_escuro_bt_default">System</string>
+    <string name="tema_escuro_bt_dark">On</string>
+    <string name="tema_escuro_bt_light">Off</string>
+    <string name="tema_escuro_titulo">Night mode</string>
+    <string name="cores_eixosp_titulo">Axes and points color</string>
+
+    <!--<string name="cores_proximas">Obs.: evitar cor próxima da escolhida para a seleção de pontos.</string>-->
+    <string name="tamanho_pontos">Point marker size</string>
+    <string name="modo_auto">Automatic points selection</string>
+    <string name="salvamento_auto">AutoSave</string>
+    <string name="salvamento_auto2">Save recovery information every minute.</string>
+    <string name="conf_sensibilidade_txt">Specificity (S)</string>
+    <string name="conf_sensibilidade_S">S</string>
+    <string name="conf_sensibilidade_tempo">time</string>
+    <string name="sens_baixa_str">Low</string>
+    <string name="sens_alta_str">High</string>
+    <string-array name="conf_sensibilidade">
+        <item name="sens_baixa">Low</item>
+        <item name="sens_alta">High</item>
+    </string-array>
+
+    <string-array name="tamanhos_pontos">
+        <item name="tpequeno">Small</item>
+        <item name="tmedio">Medium</item>
+        <item name="tgrande">Large</item>
+    </string-array>
+    <string name="tpequeno">Small</string>
+    <string name="tmedio">Medium</string>
+    <string name="tgrande">Large</string>
+
+
+    <!-- exportar csv-->
+    <string name="exportar_csv_diretorio_falha">A share folder could not be created.</string>
+    <string name="exportar_csv_sem_dados">No data to be shared.</string>
+    <string name="exportar_csv_sem_dados2">Save the file.</string>
+    <string name="exportar_csv_concluido">File saved on the storage, folder</string>
+    <string name="exportar_aguardar">Please wait</string>
+    <string name="exportar_titulo1">Point as the decimal separator</string>
+    <string name="exportar_titulo2">Comma as the decimal separator</string>
+    <string name="db_erro_instalacao">Some tables could not be created while installing the app. It will not work properly.</string>
+    <string name="bitmap_range">Setting color range</string>
+    <string name="pontos_identif">Selecting points</string>
+
+    <string name="servico_toast_inicial">Starting point selection.</string>
+    <string name="servico_toast_final">Point selection completed.</string>
+    <string name="servico_toast_titulo">Selecting points</string>
+    <string name="servico_toast_msg">Meanwhile, you can use another app.</string>
+
+
+
+    <!-- ========= Não traduzir =========== -->
+    <string name="opcao_sim" translatable="false">sim</string>
+    <string name="opcao_nao" translatable="false">nao</string>
+    <string name="bd_sim" translatable="false">Sim</string>
+    <string name="bd_nao" translatable="false">Não</string>
+    <string name="bd_tabela_principal" translatable="false">tabela_principal</string>
+    <string name="temaestilo" translatable="false">temaestilo</string>
+    <string name="autosave" translatable="false">autosave</string>
+    <string name="tema_dia" translatable="false">dia</string>
+    <string name="tema_noite" translatable="false">noite</string>
+    <string name="tema_sistema" translatable="false">sistema</string>
+    <string name="sensibilidade" translatable="false">sensibilidade</string>
+    <string name="coreixo" translatable="false">coreixo</string>
+    <string name="tamanhoponto" translatable="false">tamanhoponto</string>
+    <string name="nomeprojetokey" translatable="false">nomeprojetokey</string>
+    <string name="primeiro_acesso" translatable="false">primeiro_acesso</string>
+    <string name="primeiro_acesso_camera" translatable="false">primeiro_acesso_camera</string>
+    <string name="buscacor" translatable="false">buscacor</string>
+
+    <!-- manifest authorities -->
+    <string name="manifest_authorities" translatable="false">com.rma.kolektipunkton</string>
+
+    <string name="compartilhar_nome_pasta" translatable="false">Compartilhamento</string>
+
+    <string name="exportar_nome_pasta" translatable="false">KolektiPunkton</string>
+
+</resources>

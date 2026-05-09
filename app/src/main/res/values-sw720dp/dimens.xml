@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ========================= -->
+    <!--       TEXT SIZES          -->
+    <!-- ========================= -->
+    <dimen name="text_display_large">80sp</dimen>
+    <dimen name="text_display_medium">64sp</dimen>
+    <dimen name="text_display_small">56sp</dimen>
+
+    <dimen name="text_headline_large">48sp</dimen>
+    <dimen name="text_headline_medium">40sp</dimen>
+    <dimen name="text_headline_small">36sp</dimen>
+
+    <dimen name="text_title_xlarge">36sp</dimen>
+    <dimen name="text_title_large">32sp</dimen>
+    <dimen name="text_title_medium">24sp</dimen>
+    <dimen name="text_title_small">20sp</dimen>
+
+    <dimen name="text_body_large">22sp</dimen>
+    <dimen name="text_body_medium">20sp</dimen>
+    <dimen name="text_body_small">16sp</dimen>
+
+    <dimen name="text_label_large">18sp</dimen>
+    <dimen name="text_label_medium">16sp</dimen>
+    <dimen name="text_label_small">14sp</dimen>
+
+
+    <!-- ========================= -->
+    <!--       SPACING TOKENS      -->
+    <!-- ========================= -->
+    <dimen name="space_3xs">3dp</dimen>
+    <dimen name="space_2xs">6dp</dimen>
+    <dimen name="space_xs">12dp</dimen>
+    <dimen name="space_sm">24dp</dimen>
+    <dimen name="space_md">32dp</dimen>
+    <dimen name="space_lg">40dp</dimen>
+    <dimen name="space_xl">48dp</dimen>
+    <dimen name="space_2xl">56dp</dimen>
+    <dimen name="space_3xl">64dp</dimen>
+
+
+    <!-- ========================= -->
+    <!--     PADDING / MARGINS     -->
+    <!-- ========================= -->
+    <dimen name="padding_2xsmall">6dp</dimen>
+    <dimen name="padding_xsmall">12dp</dimen>
+    <dimen name="padding_small">24dp</dimen>
+    <dimen name="padding_medium">32dp</dimen>
+    <dimen name="padding_large">40dp</dimen>
+    <dimen name="padding_xlarge">48dp</dimen>
+
+    <dimen name="margin_2xsmall">6dp</dimen>
+    <dimen name="margin_xsmall">12dp</dimen>
+    <dimen name="margin_small">24dp</dimen>
+    <dimen name="margin_medium">32dp</dimen>
+    <dimen name="margin_large">40dp</dimen>
+    <dimen name="margin_xlarge">48dp</dimen>
+    <dimen name="margin_2xlarge">56dp</dimen>
+
+
+    <!-- ========================= -->
+    <!--         BUTTONS           -->
+    <!-- ========================= -->
+    <dimen name="button_height">64dp</dimen>
+    <dimen name="button_corner_radius">20dp</dimen>
+    <dimen name="button_padding_horizontal">40dp</dimen>
+    <dimen name="button_padding_vertical">20dp</dimen>
+
+
+    <!-- ========================= -->
+    <!--         ICONS             -->
+    <!-- ========================= -->
+    <dimen name="icon_size_small">32dp</dimen>
+    <dimen name="icon_size_medium">40dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_size_xlarge">56dp</dimen>
+
+
+    <!-- ========================= -->
+    <!--        ELEVATIONS         -->
+    <!-- ========================= -->
+    <dimen name="elevation_level_0">0dp</dimen>
+    <dimen name="elevation_level_1">4dp</dimen>
+    <dimen name="elevation_level_2">8dp</dimen>
+    <dimen name="elevation_level_3">12dp</dimen>
+    <dimen name="elevation_level_4">16dp</dimen>
+    <dimen name="elevation_level_5">24dp</dimen>
+
+
+    <!-- ========================= -->
+    <!--         RADIUS            -->
+    <!-- ========================= -->
+    <dimen name="radius_small">16dp</dimen>
+    <dimen name="radius_medium">24dp</dimen>
+    <dimen name="radius_large">32dp</dimen>
+
+
+    <!-- ========================= -->
+    <!--      LAYOUT TOKENS        -->
+    <!-- ========================= -->
+    <dimen name="layout_min_touch">64dp</dimen>
+    <dimen name="layout_card_padding">32dp</dimen>
+    <dimen name="layout_section_spacing">64dp</dimen>
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menuNovoP"
+        android:orderInCategory="100"
+        android:title="@string/toolbar_novop"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add_24"/>
+
+    <item android:id="@+id/menuAbrirP"
+        android:orderInCategory="200"
+        android:title="@string/toolbar_abrirp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menuExcluirP"
+        android:orderInCategory="300"
+        android:title="@string/toolbar_excluirp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menuLimparP"
+        android:orderInCategory="400"
+        android:title="@string/toolbar_limparp"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menuPref"
+        android:orderInCategory="500"
+        android:title="@string/toolbar_preferencias"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menuInstrucoes"
+        android:orderInCategory="600"
+        android:title="@string/toolbar_instrucoes"
+        app:showAsAction="never" />
+</menu>

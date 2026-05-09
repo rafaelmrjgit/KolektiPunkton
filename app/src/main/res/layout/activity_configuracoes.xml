@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ConfiguracoesActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarSize="@dimen/space_2xs"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@color/grey_light"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_lg">
+
+            <!-- Card 1: Tema -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewConf1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <TextView
+                        android:id="@+id/textConf1"
+                        style="@style/AppTitleMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:text="@string/tema_escuro_titulo" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/toggle_themeConf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/bt_default"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tema_escuro_bt_default"
+                            android:textSize="@dimen/text_body_medium" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/bt_dark"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tema_escuro_bt_dark"
+                            android:textSize="@dimen/text_body_medium" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/bt_light"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tema_escuro_bt_light"
+                            android:textSize="@dimen/text_body_medium" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 2: Modo Automático -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewConf2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <TextView
+                        android:id="@+id/textViewModoAuto"
+                        style="@style/AppTitleMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:text="@string/modo_auto" />
+
+                    <TextView
+                        android:id="@+id/textViewSensibilidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:text="@string/conf_sensibilidade_txt" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageViewConfSens"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_arrow_upward"
+                            app:tint="?attr/colorOnSurface" />
+
+                        <TextView
+                            android:id="@+id/textViewSensibilidadeRegra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_2xsmall"
+                            android:text="@string/conf_sensibilidade_S" />
+
+                        <ImageView
+                            android:id="@+id/imageViewConfTempo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_medium"
+                            app:srcCompat="@drawable/ic_arrow_downward"
+                            app:tint="?attr/colorOnSurface" />
+
+                        <TextView
+                            android:id="@+id/textViewSensibilidadeRegra2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_2xsmall"
+                            android:text="@string/conf_sensibilidade_tempo" />
+
+                        <Spinner
+                            android:id="@+id/spinnerConfig2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/conf_sensibilidade"
+                            android:popupBackground="@color/md_theme_surface"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 3: Cores -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewConf3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/AppTitleMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:text="@string/cores_eixosp_titulo" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:theme="@style/Theme.MaterialComponents.Light"
+                        app:chipSpacingHorizontal="@dimen/space_xs"
+                        app:chipSpacingVertical="@dimen/space_xs"
+                        app:selectionRequired="true"
+                        app:singleLine="false"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip1"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="@dimen/icon_size_xlarge"
+                            android:checkable="true"
+                            android:minHeight="@dimen/icon_size_large"
+                            android:padding="0dp"
+                            app:checkedIconTint="@color/corEixoPBr"
+                            app:checkedIconVisible="true"
+                            app:chipBackgroundColor="@color/corEixoPVm"
+                            app:chipCornerRadius="@dimen/radius_small"
+                            app:chipMinTouchTargetSize="0dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip2"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="@dimen/icon_size_xlarge"
+                            android:checkable="true"
+                            android:minHeight="@dimen/icon_size_large"
+                            android:padding="0dp"
+                            app:checkedIconTint="@color/corEixoPPr"
+                            app:checkedIconVisible="true"
+                            app:chipBackgroundColor="@color/corEixoPAm"
+                            app:chipCornerRadius="@dimen/radius_small"
+                            app:chipMinTouchTargetSize="0dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip3"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="@dimen/icon_size_xlarge"
+                            android:checkable="true"
+                            android:minHeight="@dimen/icon_size_large"
+                            android:padding="0dp"
+                            app:checkedIconTint="@color/corEixoPBr"
+                            app:checkedIconVisible="true"
+                            app:chipBackgroundColor="@color/corEixoPAz"
+                            app:chipCornerRadius="@dimen/radius_small"
+                            app:chipMinTouchTargetSize="0dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip4"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="@dimen/icon_size_xlarge"
+                            android:checkable="true"
+                            android:minHeight="@dimen/icon_size_large"
+                            android:padding="0dp"
+                            app:checkedIconTint="@color/corEixoPPr"
+                            app:checkedIconVisible="true"
+                            app:chipBackgroundColor="@color/corEixoPVd"
+                            app:chipCornerRadius="@dimen/radius_small"
+                            app:chipMinTouchTargetSize="0dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip5"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="@dimen/icon_size_xlarge"
+                            android:checkable="true"
+                            android:minHeight="@dimen/icon_size_large"
+                            android:padding="0dp"
+                            app:checkedIconTint="@color/corEixoPBr"
+                            app:checkedIconVisible="true"
+                            app:chipBackgroundColor="@color/corEixoPPr"
+                            app:chipCornerRadius="@dimen/radius_small"
+                            app:chipMinTouchTargetSize="0dp" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip6"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:width="@dimen/icon_size_xlarge"
+                            android:checkable="true"
+                            android:minHeight="@dimen/icon_size_large"
+                            android:padding="0dp"
+                            app:checkedIconTint="@color/corEixoPPr"
+                            app:checkedIconVisible="true"
+                            app:chipBackgroundColor="@color/corEixoPBr"
+                            app:chipCornerRadius="@dimen/radius_small"
+                            app:chipMinTouchTargetSize="0dp" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 4: Tamanho dos Pontos -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewConf4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        style="@style/AppTitleMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:text="@string/tamanho_pontos" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageViewTamanhoPonto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_fundo" />
+
+                        <Spinner
+                            android:id="@+id/spinnerConfig"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/tamanhos_pontos"
+                            android:popupBackground="@color/md_theme_surface"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card 5: Salvamento -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewConf5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_medium">
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/switchAutoSave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:text="@string/salvamento_auto" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/salvamento_auto2" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

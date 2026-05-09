@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.InstrucoesActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appbarToolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        android:fadeScrollbars="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/textViewInstrucoes1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:gravity="left"
+            android:justificationMode="inter_word"
+            android:text="@string/activity_intrucoes1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/AppTitleMedium"/>
+
+        <TextView
+            android:id="@+id/textViewInstrucoes2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:gravity="left"
+            android:justificationMode="inter_word"
+            android:text="@string/activity_intrucoes2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes1" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="658:528"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes2"
+                app:srcCompat="@drawable/image1" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes1" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1728"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes3"
+                app:srcCompat="@drawable/image2" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1724"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes2"
+                app:srcCompat="@drawable/image3" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes3" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1728"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes4"
+                app:srcCompat="@drawable/image4" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1724"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes4"
+                app:srcCompat="@drawable/image5" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1716"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes5"
+                app:srcCompat="@drawable/image6" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1724"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes6"
+                app:srcCompat="@drawable/image7" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1716"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes7"
+                app:srcCompat="@drawable/image8" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes8" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:2712"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes5"
+                app:srcCompat="@drawable/image9" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes9" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes10"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1944"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes6"
+                app:srcCompat="@drawable/image10" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes11"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:2800"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes10"
+                app:srcCompat="@drawable/image11" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes11" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes12"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:2220"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes7"
+                app:srcCompat="@drawable/image12" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes12" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1152"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes8"
+                app:srcCompat="@drawable/image13" />
+
+            <ListView
+                android:id="@+id/listViewIntrucoes1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes13"
+                android:entries="@array/activity_intrucoes_lista"/>
+
+            <TextView
+                android:id="@+id/textViewInstrucoes9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/listViewIntrucoes1" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes14"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:2224"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes9"
+                app:srcCompat="@drawable/image14" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes14" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes15"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:308"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes10"
+                app:srcCompat="@drawable/image15" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="left"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes15" />
+
+            <ImageView
+                android:id="@+id/imageViewIntrucoes16"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintDimensionRatio="1440:1724"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes11"
+                app:srcCompat="@drawable/image16" />
+
+            <TextView
+                android:id="@+id/textViewInstrucoes12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:gravity="center"
+                android:justificationMode="inter_word"
+                android:text="@string/activity_intrucoes12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes16" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

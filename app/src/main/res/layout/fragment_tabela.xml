@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TabelaFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTabela"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerTab1"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/textViewTab1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/imagem_x"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/dividerTab1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/dividerTab4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTab2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/imagem_y"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/dividerTab5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dividerTab1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/dividerTab1"
+        android:layout_width="@dimen/space_3xs"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTab2"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTab2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewTab1"
+        app:layout_constraintTop_toTopOf="@+id/textViewTab1"
+        android:background="?attr/colorControlNormal"/>
+
+    <View
+        android:id="@+id/dividerTab2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_3xs"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTab2"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTab2"
+        app:layout_constraintStart_toStartOf="@+id/textViewTab1"
+        android:background="?attr/colorControlNormal"/>
+
+    <View
+        android:id="@+id/dividerTab3"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_3xs"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTab2"
+        app:layout_constraintStart_toStartOf="@+id/textViewTab1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTab1"
+        android:background="?attr/colorControlNormal"/>
+
+    <View
+        android:id="@+id/dividerTab4"
+        android:layout_width="@dimen/space_3xs"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTab1"
+        app:layout_constraintTop_toTopOf="@+id/textViewTab1"
+        android:background="?attr/colorControlNormal"/>
+
+    <View
+        android:id="@+id/dividerTab5"
+        android:layout_width="@dimen/space_3xs"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTab2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTab2"
+        android:background="?attr/colorControlNormal"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

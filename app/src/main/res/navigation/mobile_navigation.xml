@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_grafico">
+
+    <fragment
+        android:id="@+id/nav_grafico"
+        android:name="com.rma.kolektipunkton.ui.GraficoFragment"
+        android:label="@string/menu_grafico"
+        tools:layout="@layout/fragment_grafico" />
+
+    <fragment
+        android:id="@+id/nav_tabela"
+        android:name="com.rma.kolektipunkton.ui.TabelaFragment"
+        android:label="@string/menu_tabela"
+        tools:layout="@layout/fragment_tabela" />
+
+    <fragment
+        android:id="@+id/nav_enviar"
+        android:name="com.rma.kolektipunkton.ui.CompartilharFragment"
+        android:label="@string/fragmento_compartilhar"
+        tools:layout="@layout/fragment_compartilhar" />
+
+    <fragment
+        android:id="@+id/nav_sobre_app"
+        android:name="com.rma.kolektipunkton.ui.SobreAppFragment"
+        android:label="@string/fragmento_sobre_app"
+        tools:layout="@layout/fragment_sobre_app" />
+
+</navigation>
