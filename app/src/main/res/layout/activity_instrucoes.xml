@@ -6,11 +6,11 @@
     tools:context=".activities.InstrucoesActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:id="@+id/instrucoesLayout"
     android:orientation="vertical">
 
-    <include
-        android:id="@+id/appbarToolbar"
-        layout="@layout/toolbar" />
+    <include layout="@layout/app_bar" />
 
     <ScrollView
         android:layout_height="0dp"
@@ -333,14 +333,48 @@
                 app:layout_constraintTop_toBottomOf="@+id/textViewInstrucoes8"
                 app:srcCompat="@drawable/image13" />
 
-            <ListView
-                android:id="@+id/listViewIntrucoes1"
+            <LinearLayout
+                android:id="@+id/containerIntrucoesLista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes13"
-                android:entries="@array/activity_intrucoes_lista"/>
+                app:layout_constraintTop_toBottomOf="@+id/imageViewIntrucoes13">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="• Open file: it opens a list box for choosing a saved file."
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_body_medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="• Delete file: it deletes all the file data. The file no longer exists in the app."
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_body_medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:text="• Clear file: it deletes all the file data. The file still exists in the app and can be selected in Open file."
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_body_medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Settings: you can choose the marker color, the marker size, the app theme, the auto-save and set the specificity."
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_body_medium" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textViewInstrucoes9"
@@ -354,7 +388,7 @@
                 android:text="@string/activity_intrucoes9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/listViewIntrucoes1" />
+                app:layout_constraintTop_toBottomOf="@+id/containerIntrucoesLista" />
 
             <ImageView
                 android:id="@+id/imageViewIntrucoes14"

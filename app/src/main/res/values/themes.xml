@@ -63,12 +63,9 @@
         <!-- AlertDialog -->
         <item name="alertDialogTheme">@style/AlertDialogCustom</item>
 
-        <!-- toolbar, navigation drawer -->
-        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
-        <item name="drawerArrowStyle">@style/Widget.App.DrawerArrow</item>
-
-        <item name="android:statusBarColor">@color/md_theme_primaryContainer</item>
-
+        <item name="android:statusBarColor">@color/colorSurfaceToolbar</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 
     <style name="ThemeOverlay.AppTheme.MediumContrast" parent="Theme.Material3.Light.NoActionBar">
@@ -200,6 +197,14 @@
         </item>
     </style>
 
+
+    <!-- configura a cor da seta de voltar e ícones da appbar toolbar padrão do sistema -->
+    <style name="ThemeOverlay.App.ActionBar" parent="ThemeOverlay.Material3.ActionBar">
+        <item name="colorControlNormal">@color/colorOnSurfaceToolbar</item>
+    </style>
+
+
+
     <!-- splash screen -->
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <!-- Cor do fundo da splash -->
@@ -208,29 +213,6 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_tela_splash</item>
         <!-- Tema que será aplicado após a splash sumir -->
         <item name="postSplashScreenTheme">@style/AppTheme</item>
-    </style>
-
-
-    <!-- Estilo para a Toolbar -->
-    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
-        <item name="android:background">@color/md_theme_primaryContainer</item>
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
-        <item name="titleTextColor">@android:color/white</item>
-        <!-- seta voltar -->
-        <item name="navigationIconTint">@android:color/white</item>
-    </style>
-
-    <!-- controla as cores dos itens da Toolbar -->
-    <style name="ThemeOverlay.App.Toolbar" parent="ThemeOverlay.Material3.ActionBar">
-        <!-- Cor de todos os ícones (3 pontos, ícones de ação como o '+') -->
-        <item name="colorControlNormal">@android:color/white</item>
-        <!-- Cor do título -->
-        <item name="android:textColorPrimary">@android:color/white</item>
-    </style>
-
-    <!-- ícone de hambúrguer do Navigation Drawer -->
-    <style name="Widget.App.DrawerArrow" parent="Widget.AppCompat.DrawerArrowToggle">
-        <item name="color">@android:color/white</item>
     </style>
 
 

@@ -4,6 +4,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
@@ -12,6 +17,7 @@ import com.rma.kolektipunkton.adapter.ListaExclProjAdaptador
 import com.rma.kolektipunkton.helper.BdDAO
 import com.rma.kolektipunkton.helper.Constantes
 import com.rma.kolektipunkton.helper.RecyclerItemClickListener
+import com.rma.kolektipunkton.helper.setupEdgeToEdge
 
 class ExclusaoProjActivity : AppCompatActivity() {
     private val listaProjetosExcl = ArrayList<String>()
@@ -24,9 +30,14 @@ class ExclusaoProjActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exclusao_proj)
 
-        //getSupportActionBar()!!.setDisplayHomeAsUpEnabled(true) //botão voltar
-        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar2)
+        // status bar e navigation bar
+        val root = findViewById<View>(R.id.exclusaoLayout)
+        val appBar = findViewById<View>(R.id.appBarLayout)
+        window.setupEdgeToEdge(root, appBar)
+        val toolbar = findViewById<Toolbar>(R.id.appBar)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
         toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
 
         recyclerExclProjeto = findViewById<RecyclerView>(R.id.recyclerExclusaoProj)
@@ -72,6 +83,12 @@ class ExclusaoProjActivity : AppCompatActivity() {
                 })
         )
         this.carregarListaExclProj()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        // This tells the activity to go back to the previous screen
+        onBackPressedDispatcher.onBackPressed()
+        return true
     }
 
     fun carregarListaExclProj() {

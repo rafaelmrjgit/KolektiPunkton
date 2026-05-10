@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="false"
+    android:id="@+id/configuracoesLayout"
     tools:context=".activities.ConfiguracoesActivity">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/app_bar" />
 
     <ScrollView
         android:layout_width="match_parent"

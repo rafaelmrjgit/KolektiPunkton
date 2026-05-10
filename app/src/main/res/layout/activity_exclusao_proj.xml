@@ -6,9 +6,11 @@
     tools:context=".activities.ExclusaoProjActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:id="@+id/exclusaoLayout"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/app_bar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerExclusaoProj"

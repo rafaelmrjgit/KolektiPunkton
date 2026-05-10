@@ -6,7 +6,8 @@
         android:orderInCategory="100"
         android:title="@string/toolbar_novop"
         app:showAsAction="always"
-        android:icon="@drawable/ic_add_24"/>
+        android:icon="@drawable/ic_add_24"
+        android:iconTint="@color/colorOnSurfaceToolbar"/>
 
     <item android:id="@+id/menuAbrirP"
         android:orderInCategory="200"

@@ -2,10 +2,17 @@ package com.rma.kolektipunkton.activities
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import coil.load
 import com.rma.kolektipunkton.R
 import com.rma.kolektipunkton.databinding.ActivityInstrucoesBinding
+import com.rma.kolektipunkton.helper.setupEdgeToEdge
 
 class InstrucoesActivity : AppCompatActivity() {
 
@@ -16,13 +23,24 @@ class InstrucoesActivity : AppCompatActivity() {
 
         binding = ActivityInstrucoesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
-        setSupportActionBar(binding.appbarToolbar.toolbar2)
-        binding.appbarToolbar.toolbar2.setNavigationOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
-        
+
+        // status bar e navigation bar
+        val root = findViewById<View>(R.id.instrucoesLayout)
+        val appBar = findViewById<View>(R.id.appBarLayout)
+        window.setupEdgeToEdge(root, appBar)
+        val toolbar = findViewById<Toolbar>(R.id.appBar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
+
         carregarImagens()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        // This tells the activity to go back to the previous screen
+        onBackPressedDispatcher.onBackPressed()
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

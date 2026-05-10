@@ -108,7 +108,7 @@ The graph parameters must be informed in 4 fields. Then click on the Save button
     <string name="db_salvo_temp_falha">The data could not be saved.</string>
     <string name="db_aguardar_gravacao">Please wait</string>
     <string name="pref_nome_vazio">The file cannot be saved. A name does not exist.</string>
-    <string name="db_primeiro_projeto">FirstFile</string>
+    <string name="db_primeiro_projeto">file#1</string>
     <string name="db_desinstalacao">The app could not format the database.</string>
 
 
