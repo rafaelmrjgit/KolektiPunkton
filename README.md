@@ -8,10 +8,18 @@ Manually reading dozens of points is slow, repetitive, and often impractical.
 This Android app allows you to load a graph image, mark points in a semi‑automatic workflow, and quickly generate a data table.
 The resulting table is displayed in the app and can be exported as a CSV file for use in external software.
 
+
 ### 🎥 Video Demonstration
-Click the thumbnail below to watch the demo on YouTube:
+### Current Version
+Click the thumbnail below to watch the most recent demonstration of the app:
+
+[![Demo Video](https://img.youtube.com/vi/PKW_RAACAaM/hqdefault.jpg)](https://youtu.be/PKW_RAACAaM)
+
+
+### Historical Version
 
 [![Demo Video](https://img.youtube.com/vi/6WX6tYrRNYY/hqdefault.jpg)](https://youtu.be/6WX6tYrRNYY)
+
 
 ### 🛠️ Technical Debt & Improvement Plan
 
