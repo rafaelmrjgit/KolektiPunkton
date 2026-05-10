@@ -2,12 +2,12 @@ package com.rma.kolektipunkton.activities
 
 import android.content.Intent
 import android.content.SharedPreferences
-import android.content.res.Configuration
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -25,6 +25,7 @@ import com.rma.kolektipunkton.helper.CarregarConstantes
 import com.rma.kolektipunkton.helper.Constantes
 import com.rma.kolektipunkton.helper.Instalacao
 import com.rma.kolektipunkton.helper.ToastPersonalizado
+import com.rma.kolektipunkton.helper.setupEdgeToEdge
 import java.lang.Thread
 
 class MainActivity : AppCompatActivity() {
@@ -41,8 +42,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById<Toolbar?>(R.id.toolbar)
+        val coordinatorLayout = findViewById<View>(R.id.appBarMain)
+        val appBarLayout = findViewById<View>(R.id.appBarMainLayout)
+        window.setupEdgeToEdge(coordinatorLayout, appBarLayout)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
         val drawer: DrawerLayout? = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav_view)
 

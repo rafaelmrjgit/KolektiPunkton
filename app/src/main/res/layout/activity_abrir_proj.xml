@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="false"
+    android:id="@+id/openlayout"
     tools:context=".activities.AbrirProjActivity">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/app_bar" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerListaProjetos"

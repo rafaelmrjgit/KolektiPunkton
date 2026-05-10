@@ -6,14 +6,18 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.appbar.MaterialToolbar
 import com.rma.kolektipunkton.R
 import com.rma.kolektipunkton.adapter.ListaProjetosAdaptador
 import com.rma.kolektipunkton.helper.BdDAO
 import com.rma.kolektipunkton.helper.Constantes
 import com.rma.kolektipunkton.helper.RecyclerItemClickListener
+import com.rma.kolektipunkton.helper.setupEdgeToEdge
 
 class AbrirProjActivity : AppCompatActivity() {
     private val listaProjetos = ArrayList<String>()
@@ -26,9 +30,15 @@ class AbrirProjActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_abrir_proj)
 
-        //getSupportActionBar()!!.setDisplayHomeAsUpEnabled(true) //botão voltar
-        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar2)
+        // status bar e navigation bar
+        val root = findViewById<View>(R.id.openlayout)
+        val appBar = findViewById<View>(R.id.appBarLayout)
+        window.setupEdgeToEdge(root, appBar)
+        //toolbar
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.appBar)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
         toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
 
         recyclerSelecaoProjeto = findViewById<RecyclerView>(R.id.recyclerListaProjetos)
@@ -73,7 +83,6 @@ class AbrirProjActivity : AppCompatActivity() {
 
         this.carregarListaProjeto()
     }
-
 
     fun carregarListaProjeto() {
         listaProjetos.clear()

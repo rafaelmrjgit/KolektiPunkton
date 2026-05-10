@@ -63,12 +63,9 @@
         <!-- AlertDialog -->
         <item name="alertDialogTheme">@style/AlertDialogCustom</item>
 
-        <!-- toolbar, navigation drawer -->
-        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
-        <item name="drawerArrowStyle">@style/Widget.App.DrawerArrow</item>
-
-        <item name="android:statusBarColor">@color/md_theme_primaryContainer</item>
-
+        <item name="android:statusBarColor">@color/colorSurfaceToolbar</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 
     <style name="ThemeOverlay.AppTheme.MediumContrast" parent="Theme.Material3.Dark.NoActionBar">
@@ -169,6 +166,17 @@
         <item name="colorSurfaceContainer">@color/md_theme_surfaceContainer_highContrast</item>
         <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh_highContrast</item>
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest_highContrast</item>
+    </style>
+
+
+    <!-- splash screen -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Cor do fundo da splash -->
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <!-- Ícone da splash -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_tela_splash</item>
+        <!-- Tema que será aplicado após a splash sumir -->
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
 
 </resources>

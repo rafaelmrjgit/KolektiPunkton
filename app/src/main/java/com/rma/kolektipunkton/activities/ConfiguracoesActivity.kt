@@ -15,7 +15,12 @@ import android.widget.Spinner
 import com.google.android.material.materialswitch.MaterialSwitch
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.doOnLayout
+import androidx.core.view.updatePadding
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
@@ -24,6 +29,7 @@ import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.rma.kolektipunkton.R
 import com.rma.kolektipunkton.helper.Constantes
+import com.rma.kolektipunkton.helper.setupEdgeToEdge
 
 class ConfiguracoesActivity : AppCompatActivity() {
     //private RadioButton radioVm, radioAz, radioVd, radioAm, radioPr, radioBr;
@@ -55,10 +61,17 @@ class ConfiguracoesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_configuracoes)
 
-        //getSupportActionBar()!!.setDisplayHomeAsUpEnabled(true) //botão voltar
-        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar2)
+        // status bar e navigation bar
+        val root = findViewById<View>(R.id.configuracoesLayout)
+        val appBar = findViewById<View>(R.id.appBarLayout)
+        window.setupEdgeToEdge(root, appBar)
+        //toolbar
+        val toolbar = findViewById<Toolbar>(R.id.appBar)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
         toolbar.setNavigationOnClickListener { onBackPressedDispatcher.onBackPressed() }
+
 
         val prefs = getSharedPreferences(Constantes.ARQUIVO_PREFERENCIA, 0) //modo privado
         Constantes.nomeProjetoPref = prefs
@@ -350,6 +363,12 @@ class ConfiguracoesActivity : AppCompatActivity() {
         imgTamanhoPonto.doOnLayout {
             desenharCirculo(Constantes.tamanhoPontos)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        // This tells the activity to go back to the previous screen
+        onBackPressedDispatcher.onBackPressed()
+        return true
     }
 
 

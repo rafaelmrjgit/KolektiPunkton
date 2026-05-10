@@ -161,6 +161,8 @@
     <color name="cor8">#FFAB00</color>
     <color name="splash_background">#4F3C7C</color>
 
+    <color name="colorOnSurfaceToolbar">@android:color/white</color>
+    <color name="colorSurfaceToolbar">#675496</color>
 
     <color name="grey_light">#667781</color>
 
