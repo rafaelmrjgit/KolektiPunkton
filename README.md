@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16045312.png)](https://zenodo.org/records/16045312)
+
+
 # Kolekti Punkton
 
 ### 📝 Description
